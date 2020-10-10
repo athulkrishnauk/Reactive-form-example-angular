@@ -1,0 +1,37 @@
+<div class="container-fluid main_div_style">
+
+  <div class="row">
+    
+    <div class="col-lg-4 col-md-4"></div>
+
+    <div class="col-lg-4 col-md-4 form_style">
+
+      <h4 class="head_style">Student Login Form</h4><br>
+
+      <form [formGroup]="loginForm">
+        
+        <input type="email" class="form-control" formControlName="userName" placeholder="Username">
+        <div *ngIf="f.userName.invalid && f.userName.touched">
+          <span  *ngIf="f.userName.errors.required" style="color: red;">Username required</span> 
+          <span  *ngIf="f.userName.errors.pattern" style="color: red;">Please enter a valid email address</span> 
+        </div>
+    
+        <input type="text" class="form-control field_style" formControlName="userPassword" placeholder="Password">
+        <div *ngIf="f.userPassword.invalid && f.userPassword.touched">
+          <span  *ngIf="f.userPassword.errors.required" style="color: red;">Password required</span> 
+          <span  *ngIf="f.userPassword.errors.minlength" style="color: red;">Minimum length is 8</span> 
+        </div>
+    
+        <button (click) = "onSubmit()" class="btn btn-primary field_style" [disabled]="!loginForm.valid">Login</button>
+      </form>
+    </div>
+
+    <div class="col-lg-4 col-md-4"></div>
+
+  </div>
+
+</div>
+
+
+
+

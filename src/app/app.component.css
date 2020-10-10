@@ -1,0 +1,22 @@
+
+.main_div_style{
+    background-color: tan;
+    height: 655px;
+}
+
+.form_style {
+    background-color: aliceblue;
+    margin-top: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+}
+
+.head_style {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.field_style {
+    margin-top: 10px;
+}
